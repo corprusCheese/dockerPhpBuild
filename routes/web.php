@@ -14,5 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+// login logout and other
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/logout', function () {
+    return view('logout');
+});
+
+// page for chess and chat
+Route::get('/game', function () {
+    return view('game');
 });

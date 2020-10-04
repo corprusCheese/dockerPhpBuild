@@ -11,14 +11,21 @@ services:
       - fpm
     volumes:
       - ./:/var/www/corpruschess
+    networks:
+      - internal
   fpm:
     build:
       context: .
-      dockerfile: docker/Fpm.Dockerfile
+      dockerfile: ./docker/Fpm.Dockerfile
     volumes:
-    - ./:/var/www/corpruschess
+      - ./:/var/www/corpruschess
     links:
       - mysql
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
+      XDEBUG_CONFIG: "remote_host = 192.168.220.1 remote_enable = 1 remote_handler=dbgp remote_autostart=1"
+    networks:
+      - internal
   mysql:
     image: mysql:5.7
     ports:
@@ -26,3 +33,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=laravelchess
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/28
