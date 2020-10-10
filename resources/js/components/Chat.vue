@@ -1,8 +1,8 @@
 <template>
+    <h2>Hello, motherfuckers</h2>
 </template>
 
 <script>
-import 'vue-chessboard/dist/vue-chessboard.css'
 
 export default {
 }
