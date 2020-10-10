@@ -1,0 +1,5 @@
+docker exec -it mysql01 mysql -uroot -p
+
+username mysql
+password root
+or change it in .env config

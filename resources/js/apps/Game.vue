@@ -1,15 +1,15 @@
 <template>
-    <hello></hello>
+    <Chess></Chess>
 </template>
 
 
 <script>
-import Hello from "../components/Hello.vue";
+import Chess from "../components/Chess.vue";
 
 export default {
     name: 'Game',
     components: {
-        Hello
+        Chess
     },
     replace: false
 }

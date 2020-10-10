@@ -1,5 +1,5 @@
 <template>
-    <h2>Hello, motherfucker</h2>
+    <h2>Hello, motherfuckers</h2>
 </template>
 
 <script>

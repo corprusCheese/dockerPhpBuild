@@ -1,15 +1,15 @@
 <template>
-    <hello></hello>
+    <Main></Main>
 </template>
 
 
 <script>
-import Hello from "../components/Hello.vue";
+import Main from "../components/Main.vue";
 
 export default {
     name: 'App',
     components: {
-        Hello
+        Main
     },
     replace: false
 }
