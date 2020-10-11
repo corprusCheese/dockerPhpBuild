@@ -23,7 +23,6 @@ services:
       - mysql
     environment:
       PHP_IDE_CONFIG: "serverName=Docker"
-      XDEBUG_CONFIG: "remote_host = 192.168.220.1 remote_enable = 1 remote_handler=dbgp remote_autostart=1"
     networks:
       - internal
   mysql:
