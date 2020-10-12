@@ -7,9 +7,9 @@
     <div class="wrapper">
         @include("include.header")
 
-        <div class="content">
+        <main class="py-4">
             @yield('content')
-        </div>
+        </main>
 
         @include("include.footer")
     </div>

@@ -27,11 +27,14 @@ services:
       - internal
   mysql:
     image: mysql:5.7
+    container_name: db
     ports:
     - 33061:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=laravelchess
+      - MYSQL_ROOT_PASSWORD='root'
+      - MYSQL_DATABASE='laravelchess'
+    networks:
+      - internal
 networks:
   internal:
     driver: bridge
