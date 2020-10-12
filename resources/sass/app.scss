@@ -7,6 +7,25 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.wrapper, body {
+// https://proweb63.ru/help/all-about-css/css-footer-pribit
+// 5 способ
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
     height: 100%;
 }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}
+
