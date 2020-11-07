@@ -8,8 +8,8 @@
 <script>
 
 import {chessboard} from "vue-chessboard"
-import Chess from "../components/Chess.vue";
-import Chat from "../components/Chat.vue";
+import Chess from "../components/Game/Chess.vue";
+import Chat from "../components/Game/Chat.vue";
 
 export default {
     name: 'Game',

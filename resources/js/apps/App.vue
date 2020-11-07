@@ -4,12 +4,14 @@
 
 
 <script>
-import Main from "../components/Main.vue";
+import Main from "../components/App/Main.vue";
+import UserSearch from "../components/App/UserSearch.vue";
 
 export default {
     name: 'App',
     components: {
-        Main
+        Main,
+        UserSearch
     },
     replace: false
 }

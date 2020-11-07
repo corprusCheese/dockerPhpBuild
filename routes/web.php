@@ -14,6 +14,10 @@ Route::get('/profile', function () {
    return view('pages.profile');
 })->name('profile');
 
+Route::get('/userSearch', function () {
+    return view('pages.userSearch');
+})->name('userSearch');
+
 Auth::routes();
 
 /*Route::get('/home', [

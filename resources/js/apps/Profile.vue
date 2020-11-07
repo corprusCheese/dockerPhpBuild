@@ -4,7 +4,7 @@
 
 
 <script>
-import User from "../components/User.vue";
+import User from "../components/Profile/User.vue";
 
 export default {
     name: 'Profile',
