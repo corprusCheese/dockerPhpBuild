@@ -1,5 +1,14 @@
 <template>
-    <h2>Hello, motherfuckers</h2>
+    <div class="chat mb-4">
+        <div class="chat-body">
+        </div>
+        <div class="chat-footer">
+            <form class="form-chat">
+                <input class="input-chat" type="text" placeholder="Your msg">
+                <button class="button-chat" >Send</button>
+            </form>
+        </div>
+    </div>
 </template>
 
 <script>

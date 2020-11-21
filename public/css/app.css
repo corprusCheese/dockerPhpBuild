@@ -10903,6 +10903,8 @@ a.text-dark:focus {
   }
 }
 
+/* variables */
+
 * {
   margin: 0;
   padding: 0;
@@ -10925,5 +10927,95 @@ main {
 
 footer {
   flex: 0 0 auto;
+}
+
+/* my custom */
+
+.chess {
+  vertical-align: center;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.header-logo {
+  height: 45px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  width: 218px;
+}
+
+.logo-like-input {
+  width: 218px !important;
+}
+
+.chat {
+  min-width: 300px;
+  min-height: 330px;
+  background: #f0d560;
+  border: 0.5px solid darkgray;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-body {
+  width: 100%;
+  flex-grow: 3;
+}
+
+.button-chat {
+  border-radius: 5px;
+  border: 0.5px solid darkgray;
+  padding: 2px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.input-chat {
+  width: 80%;
+}
+
+.form-chat {
+  width: 100%;
+  display: inline-block;
+  /* центрировать..*/
+  vertical-align: middle;
+  /* ..по вертикали */
+  line-height: 1.25;
+  /* переопределить высоту строки на обычную */
+}
+
+.chat-footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: white;
+  border-top: 1px solid darkgray;
+  border-radius: 0 0 5px 5px;
+}
+
+.chess-helper {
+  display: inline-block;
+}
+
+/* restyling default elements and classes */
+
+.btn-outline-success {
+  background: white;
+  color: black;
+  border: 0.5px solid darkgray;
+}
+
+.btn-outline-success:hover {
+  background: orange;
+  color: white;
+  border: 0.5px solid orange;
 }
 

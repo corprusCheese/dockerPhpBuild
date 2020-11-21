@@ -1908,9 +1908,12 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_chessboard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-chessboard */ "./node_modules/vue-chessboard/index.js");
-/* harmony import */ var _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Game/Chess.vue */ "./resources/js/components/Game/Chess.vue");
-/* harmony import */ var _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Game/Chat.vue */ "./resources/js/components/Game/Chat.vue");
+/* harmony import */ var _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Game/Chess.vue */ "./resources/js/components/Game/Chess.vue");
+/* harmony import */ var _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Game/Chat.vue */ "./resources/js/components/Game/Chat.vue");
+/* harmony import */ var vue_chessboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-chessboard */ "./node_modules/vue-chessboard/index.js");
+//
+//
+//
 //
 //
 //
@@ -1924,9 +1927,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Game',
   components: {
-    Chess: _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    Chat: _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    chessboard: vue_chessboard__WEBPACK_IMPORTED_MODULE_0__["chessboard"]
+    Chess: _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Chat: _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    chessboard: vue_chessboard__WEBPACK_IMPORTED_MODULE_2__["chessboard"]
   },
   replace: false
 });
@@ -1946,6 +1949,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1961,11 +1973,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_chessboard_dist_vue_chessboard_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-chessboard/dist/vue-chessboard.css */ "./node_modules/vue-chessboard/dist/vue-chessboard.css");
 /* harmony import */ var vue_chessboard_dist_vue_chessboard_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_chessboard_dist_vue_chessboard_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vue_chessboard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-chessboard */ "./node_modules/vue-chessboard/index.js");
+//
+//
+//
+//
+//
 //
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    chessboard: vue_chessboard__WEBPACK_IMPORTED_MODULE_1__["chessboard"]
+  },
+  replace: false
+});
 
 /***/ }),
 
@@ -38238,7 +38262,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("center", [_c("chessboard")], 1)
+  return _c(
+    "div",
+    { staticClass: "chess" },
+    [
+      _c("chat"),
+      _vm._v(" "),
+      _c("div", { staticClass: "m-5" }),
+      _vm._v(" "),
+      _c("chess")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38262,9 +38297,29 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h2", [_vm._v("Hello, motherfuckers")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "chat mb-4" }, [
+      _c("div", { staticClass: "chat-body" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "chat-footer" }, [
+        _c("form", { staticClass: "form-chat" }, [
+          _c("input", {
+            staticClass: "input-chat",
+            attrs: { type: "text", placeholder: "Your msg" }
+          }),
+          _vm._v(" "),
+          _c("button", { staticClass: "button-chat" }, [_vm._v("Send")])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -38286,7 +38341,12 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    { staticClass: "chess-game" },
+    [_c("chessboard"), _vm._v(" "), _c("div", { staticClass: "chess-helper" })],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

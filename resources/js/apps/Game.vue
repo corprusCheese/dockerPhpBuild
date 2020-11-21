@@ -1,15 +1,18 @@
 <template>
-    <center>
-        <chessboard/>
-    </center>
+    <div class="chess">
+        <chat/>
+        <div class="m-5">
+        </div>
+        <chess/>
+    </div>
 </template>
 
 
 <script>
 
-import {chessboard} from "vue-chessboard"
 import Chess from "../components/Game/Chess.vue";
 import Chat from "../components/Game/Chat.vue";
+import {chessboard} from "vue-chessboard"
 
 export default {
     name: 'Game',
