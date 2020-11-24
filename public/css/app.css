@@ -11001,8 +11001,46 @@ footer {
   border-radius: 0 0 5px 5px;
 }
 
-.chess-helper {
+.chess-game {
+  min-width: 200px;
   display: inline-block;
+}
+
+.chess-template {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+}
+
+.chess-helper-template {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.my-chess-helper {
+  width: 300px;
+  height: 330px;
+  display: flex;
+  background: #f0d560;
+  border: 0.5px solid darkgray;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.chess-helper-item {
+  width: 200px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background: white;
+  height: 60px;
+  border: 0.5px solid darkgray;
+  border-radius: 5px;
+}
+
+.vertical-chess-items {
+  margin: 0;
 }
 
 /* restyling default elements and classes */

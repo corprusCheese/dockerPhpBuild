@@ -1,7 +1,8 @@
 <template>
-    <div class="chess-game">
-        <chessboard/>
-        <div class="chess-helper">
+    <div class="chess-template">
+        <div class="chess-game">
+            <h1>Chessboard</h1>
+            <chessboard />
         </div>
     </div>
 </template>

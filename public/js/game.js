@@ -1910,7 +1910,8 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Game/Chess.vue */ "./resources/js/components/Game/Chess.vue");
 /* harmony import */ var _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Game/Chat.vue */ "./resources/js/components/Game/Chat.vue");
-/* harmony import */ var vue_chessboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-chessboard */ "./node_modules/vue-chessboard/index.js");
+/* harmony import */ var _components_Game_ChessHelper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Game/ChessHelper */ "./resources/js/components/Game/ChessHelper.vue");
+/* harmony import */ var vue_chessboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-chessboard */ "./node_modules/vue-chessboard/index.js");
 //
 //
 //
@@ -1921,6 +1922,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 
 
 
@@ -1929,7 +1934,8 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Chess: _components_Game_Chess_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Chat: _components_Game_Chat_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    chessboard: vue_chessboard__WEBPACK_IMPORTED_MODULE_2__["chessboard"]
+    ChessHelper: _components_Game_ChessHelper__WEBPACK_IMPORTED_MODULE_2__["default"],
+    chessboard: vue_chessboard__WEBPACK_IMPORTED_MODULE_3__["chessboard"]
   },
   replace: false
 });
@@ -1945,6 +1951,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -1982,6 +1991,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1990,6 +2000,34 @@ __webpack_require__.r(__webpack_exports__);
   },
   replace: false
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 
@@ -38270,7 +38308,14 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "m-5" }),
       _vm._v(" "),
-      _c("chess")
+      _c("chess"),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "m-5",
+        staticStyle: { display: "inline-block" }
+      }),
+      _vm._v(" "),
+      _c("chess-helper")
     ],
     1
   )
@@ -38304,17 +38349,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "chat mb-4" }, [
-      _c("div", { staticClass: "chat-body" }),
+    return _c("div", {}, [
+      _c("h2", [_vm._v("Chat")]),
       _vm._v(" "),
-      _c("div", { staticClass: "chat-footer" }, [
-        _c("form", { staticClass: "form-chat" }, [
-          _c("input", {
-            staticClass: "input-chat",
-            attrs: { type: "text", placeholder: "Your msg" }
-          }),
-          _vm._v(" "),
-          _c("button", { staticClass: "button-chat" }, [_vm._v("Send")])
+      _c("div", { staticClass: "chat" }, [
+        _c("div", { staticClass: "chat-body" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "chat-footer" }, [
+          _c("form", { staticClass: "form-chat" }, [
+            _c("input", {
+              staticClass: "input-chat",
+              attrs: { type: "text", placeholder: "Your msg" }
+            }),
+            _vm._v(" "),
+            _c("button", { staticClass: "button-chat" }, [_vm._v("Send")])
+          ])
         ])
       ])
     ])
@@ -38341,14 +38390,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "chess-game" },
-    [_c("chessboard"), _vm._v(" "), _c("div", { staticClass: "chess-helper" })],
-    1
-  )
+  return _c("div", { staticClass: "chess-template" }, [
+    _c(
+      "div",
+      { staticClass: "chess-game" },
+      [_c("h1", [_vm._v("Chessboard")]), _vm._v(" "), _c("chessboard")],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "chess-helper-template", staticStyle: { float: "top" } },
+      [
+        _c("h2", [_vm._v("Chess Helper")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "my-chess-helper" }, [
+          _c("div", { staticClass: "vertical-chess-items" }, [
+            _c("div", { staticClass: "black-eats chess-helper-item" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "white-eats chess-helper-item" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "player-actions chess-helper-item" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "time-remain chess-helper-item" })
+          ])
+        ])
+      ]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -51729,6 +51829,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Chess_vue_vue_type_template_id_54cf7dae___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Chess_vue_vue_type_template_id_54cf7dae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Game/ChessHelper.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/Game/ChessHelper.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChessHelper.vue?vue&type=template&id=34d68c08& */ "./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08&");
+/* harmony import */ var _ChessHelper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChessHelper.vue?vue&type=script&lang=js& */ "./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ChessHelper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Game/ChessHelper.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChessHelper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ChessHelper.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Game/ChessHelper.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChessHelper_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ChessHelper.vue?vue&type=template&id=34d68c08& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Game/ChessHelper.vue?vue&type=template&id=34d68c08&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChessHelper_vue_vue_type_template_id_34d68c08___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
