@@ -5,13 +5,11 @@
 
 <script>
 import Main from "../components/App/Main.vue";
-import UserSearch from "../components/App/UserSearch.vue";
 
 export default {
     name: 'App',
     components: {
-        Main,
-        UserSearch
+        Main
     },
     replace: false
 }

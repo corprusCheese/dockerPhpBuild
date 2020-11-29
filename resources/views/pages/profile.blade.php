@@ -2,5 +2,5 @@
 @section('content')
     <div id="profile">
     </div>
-    <script src="{{ asset ('js/profile.js')}}" defer></script>
+    <script src="{{ asset ('js/app.js')}}" defer></script>
 @stop

@@ -1,4 +1,7 @@
 @extends('layouts.default')
+@section('settings')
+    @include("include.search")
+@stop
 @section('content')
     <div id="app">
     </div>

@@ -6,7 +6,15 @@
 
 <script>
 
+import Main from "../components/App/Main";
+
 export default {
+    name: 'UserSearch',
+    components: {
+        Main
+    },
+    replace: false
+
 }
 </script>
 

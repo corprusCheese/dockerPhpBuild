@@ -7,6 +7,8 @@
     <div class="wrapper">
         @include("include.header")
 
+        @yield('settings')
+
         <main class="py-4">
             @yield('content')
         </main>
