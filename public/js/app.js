@@ -38715,9 +38715,7 @@ var staticRenderFns = [
             _c("div", { staticClass: "card-header" }, [_vm._v("Your Profile")]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _vm._v(
-                "\n                    Your username is unknown now\n                "
-              )
+              _vm._v("\n                    Your username is\n                ")
             ])
           ])
         ])

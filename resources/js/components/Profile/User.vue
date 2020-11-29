@@ -6,7 +6,7 @@
                     <div class="card-header">Your Profile</div>
 
                     <div class="card-body">
-                        Your username is unknown now
+                        Your username is
                     </div>
                 </div>
             </div>
