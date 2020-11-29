@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\User;
+use App\Repository\Eloquent\UserRepository;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
 
 Route::get('/', function () {
     return view('pages.index');
@@ -14,9 +19,9 @@ Route::get('/profile', function () {
    return view('pages.profile');
 })->name('profile');
 
-Route::get('/userSearch', function () {
-    return view('pages.userSearch');
-})->name('userSearch');
+Route::get('/users', [
+    \App\Http\Controllers\UserController::class, 'index',
+])->middleware(\App\Http\Middleware\UserSearch::class)->name('users');
 
 Auth::routes();
 

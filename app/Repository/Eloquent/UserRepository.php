@@ -27,7 +27,23 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
      */
     public function find($id): ?Model
     {
-        //return User::query()->where('id',"=",$id)->firstOrFail();
         return $this->model->newQuery()->find($id);
+    }
+
+    /**
+     * @param $request
+     * @return Collection
+     */
+    public function fetch($request): ?Collection
+    {
+        $modelParams = $this->model->getFillable();
+        $query = $this->model->newQuery();
+        foreach ($modelParams as $param) {
+            if (isset($request[$param])) {
+                $query = $query->where($param,"LIKE","%".strval($request[$param]."%"));
+            }
+        }
+
+        return $query->get();
     }
 }

@@ -8,4 +8,5 @@ use Illuminate\Support\Collection;
 interface UserRepositoryInterface
 {
     public function find($id): ?Model;
+    public function fetch($params): ?Collection;
 }

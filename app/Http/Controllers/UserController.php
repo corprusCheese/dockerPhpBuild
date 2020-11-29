@@ -12,4 +12,17 @@ class UserController extends Controller {
         $this->userRepository = $userRepository;
     }
 
+    public function index($query)
+    {
+        if ($query) {
+            $query = ['name' => $query];
+            $users = $this->userRepository->fetch($query);
+        } else {
+            $users = null;
+        }
+
+        return view('pages.userSearch', [
+            'users' => $users
+        ]);
+    }
 }

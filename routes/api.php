@@ -15,8 +15,8 @@ Route::get('/users', function (Request $request) {
 
     $userRepository = new UserRepository(new User());
     $result = null;
-    if ($request['id']) {
-        $result = $userRepository->find($request['id']);
+    if ($request) {
+        $result = $userRepository->fetch($request);
     } else {
         $result = $userRepository->all();
     }
