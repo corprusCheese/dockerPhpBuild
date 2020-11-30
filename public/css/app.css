@@ -11043,6 +11043,20 @@ footer {
   margin: 0;
 }
 
+.user-template {
+  border: 0.5px solid darkgray;
+}
+
+.user-item {
+  border: 0.5px solid darkgray;
+  border-radius: 5px;
+  background: white;
+  width: 60%;
+  margin: 10px auto;
+  font-family: "DejaVu Sans";
+  padding: 10px 40px;
+}
+
 /* restyling default elements and classes */
 
 .btn-outline-success {
@@ -11055,5 +11069,30 @@ footer {
   background: orange;
   color: white;
   border: 0.5px solid orange;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem yellow;
+}
+
+.btn-outline-success:focus,
+.btn-outline-success.focus {
+  box-shadow: 0 0 0 0.2rem yellow;
+}
+
+.btn-outline-success.disabled,
+.btn-outline-success:disabled {
+  color: orange;
+  background-color: transparent;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: #fff;
+  background-color: orange;
+  border-color: orange;
 }
 

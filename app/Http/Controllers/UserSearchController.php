@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repository\UserRepositoryInterface;
 
-class UserController extends Controller {
+class UserSearchController extends Controller {
     private UserRepositoryInterface $userRepository;
 
     public function __construct(UserRepositoryInterface $userRepository)
@@ -12,16 +12,17 @@ class UserController extends Controller {
         $this->userRepository = $userRepository;
     }
 
-    public function index($id)
+    public function index($query)
     {
-        if ($id) {
-            $user = $this->userRepository->find($id);
+        if ($query) {
+            $query = ['name' => $query];
+            $users = $this->userRepository->fetch($query);
         } else {
-            $user = null;
+            $users = null;
         }
 
-        return view('pages.profile', [
-            'user' => $user
+        return view('pages.userSearch', [
+            'users' => $users
         ]);
     }
 }

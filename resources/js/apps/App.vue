@@ -1,5 +1,7 @@
 <template>
-    <Main></Main>
+    <div>
+        <Main></Main>
+    </div>
 </template>
 
 

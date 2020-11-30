@@ -20,8 +20,12 @@ Route::get('/profile', function () {
 })->name('profile');
 
 Route::get('/users', [
-    \App\Http\Controllers\UserController::class, 'index',
+    \App\Http\Controllers\UserSearchController::class, 'index',
 ])->middleware(\App\Http\Middleware\UserSearch::class)->name('users');
+
+Route::get('/user/{id}', [
+    \App\Http\Controllers\UserController::class, 'index',
+])->middleware(\App\Http\Middleware\UserSearch::class)->name('user');
 
 Auth::routes();
 
