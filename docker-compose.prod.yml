@@ -2,12 +2,11 @@ version: "3.3"
 
 services:
   nginx:
-    container_name: nginx
     build:
       context: .
-      dockerfile: docker/nginx/Dockerfile.nginx
+      dockerfile: docker/Dockerfile.nginx
     ports:
-      - 8098:80
+      - 80:80
     links:
       - fpm
     volumes:
@@ -15,10 +14,9 @@ services:
     networks:
       - internal
   fpm:
-    container_name: fpm
     build:
       context: .
-      dockerfile: docker/fpm/Dockerfile.fpm
+      dockerfile: docker/Dockerfile.fpm
     volumes:
       - ./:/var/www/corpruschess
     links:
