@@ -28,7 +28,3 @@ Route::get('/user/{id}', [
 ])->middleware(\App\Http\Middleware\UserSearch::class)->name('user');
 
 Auth::routes();
-
-/*Route::get('/home', [
-    App\Http\Controllers\HomeController::class, 'index'
-])->name('home');*/

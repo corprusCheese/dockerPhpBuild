@@ -10937,10 +10937,6 @@ footer {
   height: 100%;
   display: flex;
   align-items: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 0 auto;
 }
 
 .header-logo {
@@ -10955,11 +10951,10 @@ footer {
 }
 
 .chat {
-  min-width: 300px;
-  min-height: 330px;
-  background: #f0d560;
+  min-width: 30%;
+  min-height: 100%;
+  background: #ccc;
   border: 0.5px solid darkgray;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -11001,46 +10996,30 @@ footer {
   border-radius: 0 0 5px 5px;
 }
 
-.chess-game {
-  min-width: 200px;
-  display: inline-block;
+.my-chess {
+  width: 500px;
+  margin: auto;
 }
 
-.chess-template {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  display: inline-block;
+.for-adaptive-chess {
+  height: calc((100% - 500px)/2);
+  width: 100%;
 }
 
-.chess-helper-template {
-  display: inline-block;
-  white-space: nowrap;
+.chess-right-side {
+  width: 100%;
+  height: 100%;
 }
 
-.my-chess-helper {
-  width: 300px;
-  height: 330px;
-  display: flex;
-  background: #f0d560;
-  border: 0.5px solid darkgray;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: center;
+.chess-location {
+  width: 100%;
+  height: 80%;
 }
 
-.chess-helper-item {
-  width: 200px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  background: white;
-  height: 60px;
-  border: 0.5px solid darkgray;
-  border-radius: 5px;
-}
-
-.vertical-chess-items {
-  margin: 0;
+.chess-helper {
+  height: 20%;
+  width: 100%;
+  background: antiquewhite;
 }
 
 .user-template {

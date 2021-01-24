@@ -7,3 +7,6 @@
     </div>
     <script src="{{ asset ('js/app.js')}}" defer></script>
 @stop
+@section('footer')
+    @include("include.footer")
+@stop

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-md">
             <p>
-                <img src="{{ asset ('images/favicon.ico')}}" class="pb-1">orprusChess
+                <img src="{{ asset ('img/favicon.ico')}}" class="pb-1">orprusChess
                 <small class="d-block mb-3 text-muted">&copy; 2020</small>
             </p>
         </div>
