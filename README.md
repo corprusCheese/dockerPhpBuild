@@ -1,14 +1,9 @@
-<h1>CorprusChess - очередной клон популярных шахматных сайтов</h1>
-Чтобы запустить проект, понадобится MySql 5.7, php 7 и веб-сервер, которой нужно поставить в папку public.
+to build and start containers you should write in command line:
 
-<br>
-<br>
-Однако можно воспользоваться докером:
-    
     docker-compose build
     docker-compose up -d
     
-В docker крутится: <br>
+docker-compose.yml contains: <br>
     - php-fpm <br>
     - nginx <br>
     - mysql <br>
